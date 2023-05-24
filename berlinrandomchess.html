@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.diagram {
+    border: 1px solid black;
+    width: 20%;
+}
+</style>
+</head>
+<body style="font-family: arial;">
+
+<h1>Berlin Random Chess</h1>
+<h2>Intro</h2>
+Berlin Random Chess (BR) is a chess variant that is closely related to classical chess and promotes razor sharp play that will expand your tactical skills nicely <span style="font-size: 20px">😎</span> No opening theory required <span style="font-size: 20px">🤗</span>
+
+<h2>Rules</h2>
+
+What happens if the design principles of chess are applied to 10x10? Only three adjustments are needed: The next logical piece, an expanded start position and faster pawns. Will it work?
+
+<h3>Board</h3>
+The board is extended to 100 (10x10) squares. The files are labeled with the letters a-j, the ranks with the numbers 1-10. The lower right square of the board is black.
+<h3>Eagle</h3>
+One new piece is introduced. The eagle is basically a "big knight" and the logical next twin piece after bishop, knight and rook. It is complementary to these pieces. Means, it covers only squares that are not covered by them.
+<br><br>
+While the knight is a leaper that reaches all squares in a two square distance that cannot be reached by rook or bishop, the eagle has the same ability for the squares in a three square distance. The following diagram shows how it fits the picture:
+<br><br>
+<img src="bnfrcomparison.png" class="diagram">
+<h3>Pawns</h3>
+The pawns are modified as follows:
+<br><br>
+They can move up to three steps forward when placed the initial square.
+<br><br>
+Up to two steps forward when placed on the third, fourth or fifth rank.
+<br><br>
+One step forward when placed on the sixth rank or higher.
+<br><br>
+This means a pawn can reach the promotion field within five moves, which is the same number of moves as in classical chess:
+<br><br>
+<img src="pawnmovement.png" class="diagram">
+<br><br>
+En passant capturing is possible each time a pawn passes an enemy pawn by moving more than one square forward in one move:
+<br><br>
+<img src="ep1.png" class="diagram">
+<h3>Setup</h3>
+
+The castling rule is replaced by the rule that the kings are always start on the first and the last square of the board. The white pieces are randomly placed on the first rank and mirrored for black in a point symmetric fashion. Bishops obviously with different square colors. An example:
+
+<br><br>
+<img src="brsetupexample.png" class="diagram">
+<br><br>
+Note: An eagle can't make the first move.
+<h2>Notes</h2>
+<h3>BR incorporates the following design elements of classical chess:</h3>
+- Two single pieces: The key piece and the strongest piece. The latter has the same move pattern as the key piece but with unlimited range.
+<br><br>
+- Three (four) pairs of twin pieces that are complementary to each other.
+<br><br>
+- Pieces with ambiguous routes to their destination squares (knight, eagle) can move directly to these squares regardless if one or all routes are blocked.
+<br><br>
+- Pawns get slower once they pass a certain rank number.
+<br><br>
+- The game is played on a square board.
+
+<h3>It differs from 8x8 regarding the piece value distribution</h3>
+In classical chess the number of equally valued pieces consequently decreases with the piece value: Eight pawns, four pieces worth three pawns, two pieces worth five pawns, one piece worth nine pawns. The big board has four light pieces worth three (10x10) pawns but four heavy pieces worth five pawns as well.
+
+<h3>Some estimations regarding the game dynamics:</h3>
+Upvaluing the pawns by making them faster seemed necessary to keep the spirit of the original game that includes fast confrontation and a broad spectrum of possibilities for piece sacrifices.
+<br><br>
+The eagle might be about as valuable as a rook (my own estimation).
+<br><br>
+10x10 should faciliate gambits and sacrifices in general, since one pawn unit represents a lower fraction of the complete material stock.
+<br><br>
+Chances for an asymmetrical material distribution - one of the most tension creating features in classsical chess - are increased as well.
+<br><br>
+The knight obviously suffers from longer routes on the bigger board, but controls on average more squares than in classical chess.
+<br><br>
+The king might be the only piece that is less powerful on the bigger board.
+<br><br>
+Placing the kings in diametral opposition is a very natural alternative to castling which gives the same benefits - king safety and improved piece coordination - but is much better suited to introcude piece shuffling to avoid opening theory. As opposed to Chess960, BR always delivers setups that allow a fluent development of the position.
+<br><br>
+Giving the eagle a first move block is necessary, since in some setups immediate mate threats could lead to a won position for white.
+<br><br>
+As a mere view on a random setup suggests, BR promotes a playing style that prefers energy over matter - and goes hand in hand with a much stronger focus on the king. The audience will like it <span style="font-size: 20px">💥</span>
+
+<h3>History</h3>
+
+Before developing a chess version for the 10x10 board, I experimented with a point symmetric setup for the 8x8 board. Engines can play this out of the box without reconfiguration. You still can find sample games on chess360.net.
+<br><br>
+The 8x8 version with the kings placed on h1 and a8 is described as Corner Chess or Kings Corner Chess on several websites.
+<br><br>
+The big board concept was developed by me and derived from first principles. However, most elements are (obviously) not new, only the combination is.
+<br><br>
+The concept of extending the b, n, r line with the next twin piece was used in <a href="https://www.chessvariants.com/large.dir/falcon.html">
+Falcon Chess</a>, credited to George Duke, resulting in a 10x8 board, a non-leaping version of the eagle called falcon and a "r, n, b, f, q, k, f, b, n, r" setup.
+<br><br>
+In the fairy chess universe, the eagle is traditionally named bison and has apparently been used as early as <a href = "https://www.chessvariants.com/piececlopedia.dir/bison.html">1974</a>. However, the main problem here is that all pieces need a distinct initial for the game notation. "B" for bison would conflict with "B" for bishop.
+<br><br>
+"Bird" and "Kestrel" are choices that fail for the same reasons. "Falcon" was the initial choice of the author but is already used for the non-leaping version of the piece (see above).
+<br><br>
+The 3, 2, 1, 1, 1 pawn movement might be a completely new approach.
+<br><br>
+I originally developed a 10x10 version of classical chess named ChessXp which follows the same rules, but with the following castling rule and start position:
+<br><br>
+<img src="castling.png" class="diagram">
+<br><br>
+<img src="setup.png" class="diagram">
+<br><br>
+You can find the whole spec here:
+<br><br>
+<a href="https://www.chessvariants.com/rules/chessxp">https://www.chessvariants.com/rules/chessxp</a>
+
+<h3>Lawyers</h3>
+
+Game rules, as abstract ideas or methods of organizing human activity, are generally not eligible for copyright protection or patents.* And chess is for the community anyway. So just for clarification:
+
+<br>
+
+Berlin Random Chess is common heritage of mankind, as chess is. So use it as you want. But I don't complain if you give credit to the author <span style="font-size: 30px">🗿</span>
+
+<br><br>
+------------------------------<br>
+By<br> 
+Ulrich Schwekendiek<br>
+Berlin<br>
+broulis@gmx.de<br>
+2019-2023
+<br><br>
+* However, copyright applies to a specific verbalization of the game rules, which is considered to be a literary work. So, if you use this paper without major modifications, you should put my name under it. Thank you <span style="font-size: 20px">❤️</span>
+</body>
+</html>
